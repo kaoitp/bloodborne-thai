@@ -4,14 +4,14 @@
 
 ## ดาวน์โหลด
 
-เปิด [GitHub Releases](https://github.com/kaoitp/bloodborne-thai/releases) แล้วเลือกไฟล์ในหัวข้อ **Assets** ของรุ่นที่ต้องการ
-
-| ระบบ | ไฟล์ |
+| ระบบ | ดาวน์โหลดรุ่นล่าสุด |
 | --- | --- |
-| Windows x64 | `bloodborne-thai-windows-x64.zip` |
-| Linux x86-64 | `bloodborne-thai-linux-x64.tar.gz` |
+| Windows x64 | [ดาวน์โหลด Windows (.zip)](https://github.com/kaoitp/bloodborne-thai/releases/latest/download/bloodborne-thai-windows-x64.zip) |
+| Linux x86-64 | [ดาวน์โหลด Linux (.tar.gz)](https://github.com/kaoitp/bloodborne-thai/releases/latest/download/bloodborne-thai-linux-x64.tar.gz) |
 
-`SHA256SUMS.txt` ใช้ตรวจสอบไฟล์ที่ดาวน์โหลด ใน PowerShell ใช้ `Get-FileHash .\bloodborne-thai-windows-x64.zip -Algorithm SHA256` ใน Linux ให้วางไฟล์ checksum ไว้ข้างไฟล์ที่ดาวน์โหลด แล้วใช้ `sha256sum --ignore-missing --check SHA256SUMS.txt`
+[ประวัติการออกรุ่น](https://github.com/kaoitp/bloodborne-thai/releases) · [ดาวน์โหลด SHA256SUMS.txt](https://github.com/kaoitp/bloodborne-thai/releases/latest/download/SHA256SUMS.txt)
+
+ใช้ `SHA256SUMS.txt` ตรวจสอบไฟล์ที่ดาวน์โหลด ใน PowerShell ใช้ `Get-FileHash .\bloodborne-thai-windows-x64.zip -Algorithm SHA256` ใน Linux ให้วางไฟล์ checksum ไว้ข้างไฟล์ที่ดาวน์โหลด แล้วใช้ `sha256sum --ignore-missing --check SHA256SUMS.txt`
 
 ดูเลขเวอร์ชันของชุดติดตั้งได้ในไฟล์ `VERSION` ที่อยู่ในไฟล์ดาวน์โหลด
 
