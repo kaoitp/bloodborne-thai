@@ -47,12 +47,46 @@
 
 ระบุรุ่นของม็อด ระบบปฏิบัติการ รุ่นเกม และข้อความที่พบ ถ้าเป็นปัญหาคำแปล ให้แนบภาพหน้าจอ ชื่อไอเทมหรือตัวละคร และฉากที่พบเท่าที่จำได้ [GitHub Issues](https://github.com/kaoitp/bloodborne-thai/issues)
 
+## แก้คำแปลและสร้างตัวติดตั้ง
+
+```sh
+git clone https://github.com/kaoitp/bloodborne-thai.git
+cd bloodborne-thai
+```
+
+แก้ไฟล์ JSON ใน [`th/`](th/) ด้วย UTF-8 โดยคง ID ของข้อความ ตัวแปร และแท็กจัดรูปแบบไว้ ชื่อไฟล์บอกตารางของเกม เช่น `item.24.json` สำหรับคำอธิบายไอเทม เริ่มจาก [คู่มือศัพท์](docs/terminology.md) และ [ตารางวิจัยศัพท์](docs/terminology-research.md) ได้
+
+ใช้ Python 3.13 แล้วรันคำสั่งจากโฟลเดอร์ที่ clone มา
+
+**Windows (PowerShell)**
+
+```powershell
+py -3.13 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt pyinstaller==6.22.3
+.\build.ps1
+```
+
+**Linux x86-64 (Bash)**
+
+```bash
+python3.13 -m venv .venv-linux
+.venv-linux/bin/python -m pip install -r requirements.txt pyinstaller==6.22.3
+bash build.sh
+```
+
+ชุดติดตั้งจะอยู่ใน `out/` ขั้นตอน build ใช้ไฟล์ใน repo ส่วนขั้นติดตั้งและทดสอบใช้สำเนาเกมของคุณเอง บน Linux ต้องมี `ldd`, `objdump` และ `objcopy` [ข้อกำหนด PyInstaller](https://pyinstaller.org/en/stable/requirements.html#gnu-linux)
+
+ระหว่างแก้คำแปล ใช้ Python จาก venv รัน `python tools/install.py install GAME_FOLDER` เพื่อทดสอบ และ `python tools/install.py restore GAME_FOLDER` เพื่อคืนไฟล์เดิม หากต้องการข้อความอ้างอิงภาษาอังกฤษ ให้รัน `python tools/build.py export GAME_FOLDER` กับสำเนาเกมอังกฤษที่ยังไม่ได้ติดตั้งม็อด ไฟล์ที่สกัดไว้ใน `source/en/` ถูกตั้งให้ Git ข้าม
+
+ดูสคริปต์ประกอบงานแปลจากรอบก่อนใน [`tools/editorial-history/`](tools/editorial-history/)
 
 ## เครดิตและสิทธิ์
 
 Bloodborne เป็นเกมของ FromSoftware และ Sony Interactive Entertainment โครงการนี้เป็นม็อดแฟนเมดแบบไม่เป็นทางการ
 
 คำแปลภาษาไทยและเครื่องมือติดตั้งจัดทำโดยทีม Bloodborne Thai
+
+โค้ด เครื่องมือ และ workflow ที่ทีมเขียนเผยแพร่ภายใต้ [MIT License](LICENSE) สามารถใช้ แก้ไข และแจกต่อได้ตามเงื่อนไขในไฟล์นั้น ทีมเปิดให้ใช้และปรับปรุงตารางคำแปลสำหรับม็อดนี้ สิทธิ์ MIT ครอบคลุมโค้ดของทีม ส่วนเนื้อหาเกมและคำแปลที่อิงเนื้อหาเกมอยู่นอกขอบเขตของไลเซนส์นี้
 
 ฟอนต์ Anuphan เผยแพร่ภายใต้ SIL Open Font License 1.1 โดยมีไฟล์ `OFL.txt` ในชุดติดตั้ง [ต้นทางฟอนต์](https://github.com/google/fonts/tree/95f4904fc8bcf26d3420fe315560c96417c6dec7/ofl/anuphan)
 

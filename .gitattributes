@@ -1,0 +1,9 @@
+* text=auto
+*.py text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.bat text eol=crlf
+*.sh text eol=lf
+*.ttf -text
+*.gfx -text
+*.dcx -text

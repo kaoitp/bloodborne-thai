@@ -1,0 +1,17 @@
+# Local game assets and generated English text
+/original/
+/source/
+/out/
+/build/
+/dist/
+*.msgbnd.dcx
+*.gfx
+*.ttf
+!/fonts/Anuphan\[wght\].ttf
+*.otf
+*.zip
+# Python environment/cache
+/.venv/
+/.venv-linux/
+__pycache__/
+*.py[cod]
