@@ -113,5 +113,5 @@
  "46000": "<?selectUD?>:เลือก　<?selectLR?>:เปลี่ยน　<?conclusion?>:ตกลง <?cancel?>:ออก <?viewChange?>:คืนค่าเริ่มต้น",
  "46001": "<?selectUD?>:เลือก　<?conclusion?>:ตกลง　<?cancel?>:ยกเลิก",
  "69001": "<?selectUD?>:เลือก <?conclusion?>:ตกลง <?cancel?>:ปิด",
- "70000": "<?cancel?>：ปิด <?categoryChangeL?><?categoryChangeR?>：เปลี่ยนชั้น"
+ "70000": "<?cancel?>:ปิด <?categoryChangeL?><?categoryChangeR?>:เปลี่ยนชั้น"
 }
